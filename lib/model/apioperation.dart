@@ -11,7 +11,7 @@ class ApiOperation{
   
 
 await http.get(Uri.parse("https://api.pexels.com/v1/curated"),
-headers:{ "Authorization":"FPkvfQvDzHKmsYkSNfku28ukchbWmGjdzMaXwtuZfmJ62EiWDJt1fQVa"}).then((value) {
+headers:{ "Authorization":"}).then((value) {
   Map<String,dynamic> jsondata=jsonDecode(value.body);
   List photos=jsondata["photos"];
   photos.forEach((element) {
@@ -27,7 +27,7 @@ return  trendwallpapers;
 
     await http.get(Uri.parse("https://api.pexels.com/v1/search?query=$query&per_page=25&page=1"),
 
-headers:{ "Authorization":"FPkvfQvDzHKmsYkSNfku28ukchbWmGjdzMaXwtuZfmJ62EiWDJt1fQVa"}).then((value) {
+headers:{ "Authorization":""}).then((value) {
 
   Map<String,dynamic> jsondata=jsonDecode(value.body);
   List photos=jsondata["photos"];
@@ -46,7 +46,7 @@ return  searchwallpaperslist;
 
     await http.get(Uri.parse("https://api.pexels.com/v1/search?query=$query&per_page=1&page=1"),
 
-headers:{ "Authorization":"FPkvfQvDzHKmsYkSNfku28ukchbWmGjdzMaXwtuZfmJ62EiWDJt1fQVa"}).then((value) {
+headers:{ "Authorization":""}).then((value) {
 
   Map<String,dynamic> jsondata=jsonDecode(value.body);
   List photos=jsondata["photos"];
